@@ -2,194 +2,72 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SreeLakshmi</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
-    crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=0, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"
+        integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS"
+        crossorigin="anonymous"></script>
+    <title>Document</title>
+    <style>
+        .block {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
 
-  <style>
-    .container {
-      max-width: 1400px;
-      padding-top: 20px;
-      padding-bottom: 20px;
-      background: #fff;
-      margin-bottom: 20px;
-      /* height: 100vh; */
-    }
+        .header {
+            width: 100%;
+            text-align: center;
+            background: black;
+            color: white;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
 
-    body {
-      background: #eae0e0;
-    }
+        .form {
+            width: 500px;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 10px;
+        }
+    </style>
+    <script>
+        function factorial() {
+            let n = document.getElementById('number').value;
+            n = parseInt(n);
+            if (!n) {
+                alert('Invalid input');
+                return;
+            }
 
-    .skill-images {
-      padding-top: 20px;
-      justify-content: space-between;
-      flex-wrap: wrap;
-    }
+            let fact = 1;
+            for (i = n; i >= 1; i--) {
+                fact *= i;
+            }
 
-    .skill-images img {
-      height: 125px;
-
-    }
-
-    .project {
-      margin-top: 20px;
-    }
-
-    .project img {
-      width: 100%;
-    }
-  </style>
-
+            document.getElementById("result").innerHTML = "Factorial of " + n + " is " + fact
+        }
+    </script>
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg " style="background-color: blueviolet;">
-    <div class="container-fluid">
-      <a class="navbar-brand text-white" href="#">SREELAKSHMI.R</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active text-white" aria-current="page" href="#profile">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-white border-start" href="#about-me">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-white border-start" href="#skill">Skill</a>
-
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-white border-start" href="#project">Project</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-white border-start" href="#contact">Contact</a>
-          </li>
-          </li>
-
-        </ul>
-
-        <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
-      </div>
-    </div>
-  </nav>
-  <div class="container" id="profile">
-    <div class="row justify-content-center">
-      <div class="col-md-4">
-        <h3>
-          <h5> Hello, it's Me</h5>
-          <h3>Sreelakshmi.R</h3>
-          <h5>Frontend Developer</h5>
-
-          <button type="button" class="btn btn-primary" disabled>Download CV</button>
-
-          <div class="social-icons d-flex mt-2">
-            <img src="./ICONS/linkedin.png" class="me-2" style="height: 32px;" alt="">
-            <div class="github">
-              <svg height="32" aria-hidden="true" viewBox="0 0 16 16" version="1.1" width="32"
-                data-view-component="true" class="octicon octicon-mark-github">
-                <path
-                  d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z">
-                </path>
-              </svg>
+    <div class="container-fluid bg-info-subtle min-vh-100">
+        <div class="block">
+            <h2 class="header">
+                FIND FACTORIAL
+            </h2>
+            <div class="form">
+                <input type="number" placeholder="Enter a number" id="number" />
+                <button class="enter" onclick="factorial()">Enter</button>
             </div>
-          </div>
-      </div>
-      <div class="col-md-4 d-flex justify-content-end">
-        <img src="./profile.jpg" style="width: 240px;" class="img-fluid rounded-circle" alt="...">
-      </div>
-    </div>
-  </div>
-
-  <div class="container" id="about-me">
-    <div class="row justify-content-center">
-      <div class="col-md-8">
-        <h2 style="color: mediumseagreen;">ABOUT ME</h2>
-        <p>Meet Sreelakshmi R, a talented individual with a passion for web development. With a background in computer
-          science and a B.Tech degree under her belt, Sreelakshmi has honed her skills and expertise in the world of
-          technology. Recently, she completed a specialized course in MERN stack, showcasing her dedication to staying
-          ahead in the rapidly evolving field of web development. Sreelakshmi's unwavering commitment to learning and
-          growth drives her to pursue a successful career in web development. With a keen eye for detail, a creative
-          mindset, and the ability to bring ideas to life, she strives to create engaging and user-friendly web
-          experiences. Sreelakshmi's passion for coding and her dedication to delivering exceptional results make her an
-          asset to any development team. With her knowledge, skills, and determination, Sreelakshmi is ready to
-          contribute to the ever-expanding world of web development and make a meaningful impact in the digital
-          landscape</p>
-      </div>
-    </div>
-  </div>
-
-
-  <div class="container" id="skill">
-    <div class="row justify-content-center">
-      <div class="col-md-8">
-        <h2 style="color: mediumseagreen;">SKILLS</h2>
-        <div class="skill-images d-flex">
-          <img src="./ICONS/html.png" alt="">
-          <img src="./ICONS/css.png" alt="">
-          <img src="./ICONS/bootstrap.png" alt="">
-          <img src="./ICONS/js.png" alt="">
-          <img src="./ICONS/node.png" alt="">
+            <div id="result" class="result"></div>
         </div>
-
-      </div>
     </div>
-  </div>
-
-  <div class="container" id="project">
-    <div class="row justify-content-center">
-      <div class="col-md-8">
-        <h2 style="color: mediumseagreen;">PROJECT</h2>
-        <div class="project">
-          <img src="./project.png" alt="">
-        </div>
-      </div>
-    </div>
-
-  </div>
-  <div class="container" id="contact">
-    <div class="row justify-content-center">
-      <div class="col-md-8">
-        <h2 style="color: mediumseagreen;">CONTACT</h2>
-        <div class="contact">
-          <form action="">
-            <div class="mb-3">
-              <label for="exampleInputPassword1" class="form-label">name</label>
-              <input type="text" class="form-control" id="exampleInputPassword1">
-            </div>
-            
-            <div class="mb-3">
-              <label for="exampleInputEmail1" class="form-label">Email address</label>
-              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-              <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-            </div>
-
-            <div class="mb-3">
-              <label for="message" class="form-label">Message</label>
-              <textarea class="form-control" id="message" aria-describedby="messageHelp"></textarea>
-              <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-            </div>
-            
-            <button type="submit" class="btn btn-primary">Submit</button>
-        
-          </form>
-        </div>
-      </div>
-    </div>
-
-  </div>
 </body>
 
 </html>
