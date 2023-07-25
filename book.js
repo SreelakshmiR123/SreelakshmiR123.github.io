@@ -1,6 +1,6 @@
 function adddetails() {
-    uname = p1.value
-    if (uname in localStorage) {
+    bookName = p1.value
+    if (bookName in localStorage) {
         confirm("Book is already exist")
     }
     else {
@@ -9,8 +9,8 @@ function adddetails() {
         description = exampleFormControlTextarea1.value
 
 
-        user = { uname, authername, description }
-        localStorage.setItem(uname, JSON.stringify(user))
+        user = { bookName, authername, description }
+        localStorage.setItem(bookName, JSON.stringify(user))
 
         confirm("book is added")
     }
@@ -18,12 +18,12 @@ function adddetails() {
 }
 
 function searchBook() {
-    uname = search.value
+    bookName = search.value
     
-    if  (uname in localStorage) {
-        let book=localStorage.getItem(uname)
+    if  (bookName in localStorage) {
+        let book=localStorage.getItem(bookName)
         book=JSON.parse(book)
-        output.innerHTML = "<h4>BOOK DETAILS</h4><p>" + "Username: " + book.uname + "<br>" + "Author Name: " + book.authername + "<br>" + "Description" + book.description + "</p>"
+        output.innerHTML = "<h4>BOOK DETAILS</h4><p>" + "Book Name: " + book.bookName + "<br>" + "Author Name: " + book.authername + "<br>" + "Description: " + book.description + "</p>"
 
     }
     else{
