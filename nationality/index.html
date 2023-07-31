@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nationality</title>
+    <link rel="stylesheet" href="nationality.css">
+</head>
+
+<body>
+    <div class="card">
+        <h3>Predict the Nationality</h3>
+        <div class="search row">
+            <input type="text" style="width: 50%;" id="searchinput" placeholder="enter name" spellcheck="false">
+            <button class="btn btn-outline-primary" type="button" onclick="predictNationality()"> <i
+                    class="fa-solid fa-magnifying-glass"></i>search</button>
+        </div>
+        <div class="prediction" id="prediction">
+            
+        </div>
+    </div>
+</body>
+<script>    
+
+    function predictNationality() {
+        name = searchinput.value
+        fetch(`https://api.nationalize.io/?name=${name}`)
+            .then(prediction => prediction.json())
+            .then(data => {
+                displayPrediction(data)
+            })
+    }
+
+    function displayPrediction(dataArray) {
+        prediction.innerHTML=""
+        countries = dataArray.country
+        table = document.createElement('table')
+        table.innerHTML = "<thead><td>Country</td><td>Probability</td></thead>"
+        countries.forEach(country => {
+            tr = document.createElement('tr')
+            tr.innerHTML = `<td>${country.country_id}</td><td>${country.probability}</td>`
+            table.appendChild(tr)
+        });
+        console.log(table)
+        prediction.appendChild(table)
+       
+    }
+</script>
+
+</html>
