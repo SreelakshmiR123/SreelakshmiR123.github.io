@@ -1,0 +1,13 @@
+.header{
+    background-color: black;
+    
+}
+.carousal-inner>.item> img{
+    width: 100%;
+    height: auto;
+}
+.footer{
+    background-color:black;
+    height: 150px;
+    
+}
