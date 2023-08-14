@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <script>
+    function accessData() {
+      country = example.value
+      fetch(`https://restcountries.com/v2/name/${country}?fullText=true`)
+        .then(data => data.json()).then(cData => displayData(cData))
+    }
+    function displayData(dataArray) {
+      name = country
+      capital = dataArray[0].capital
+      population = dataArray[0].population
+      currencyName = dataArray[0].currencies[0].name
+      currencySymbol = dataArray[0].currencies[0].symbol
+      language = dataArray[0].language[0].nativeName
+      flag = dataArray[0].flag
+      result.innerHTML = `
+      <div class="card" style="width: 18rem;">
+    <img src=${flag} class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">card title</h5>
+      
+    </div>
+    <ul class="list-group list-group-flush">  
+      <li class="list-group-item">capital${capital}</li>
+      <li class="list-group-item">populatio${population}</li>
+      <li class="list-group-item">language${language}</li>
+      <li class="list-group-item">currency Name${currencyName}</li>
+      <li class="list-group-item">currency Symbol${currencySymbol}</li>
+    </ul>
+    
+    </div>
+  </div>`
+    }
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+    crossorigin="anonymous">
+  </script>
+
+</head>
+
+<body class="bg-black text-white">
+  <h1 class="text-center mt-4 text-secondary">check Country Details</h1>
+  <div class="mb-3 p-4 w-25 container mt-5">
+    <label for="example" class="form-label">Enter Country Name</label>
+    <input type="text" class="form-control mt-2" id="example">
+    <div class="text-center">
+      <button onclick="accessData()" type="button" class="btn btn-outline-info mt-4">
+        search
+      </button>
+    </div>
+    <div id="result" class="mt-5 p-3 w-75 container"></div>
+
+</body>
+
+</div>>
+
+</html>

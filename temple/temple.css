@@ -6,8 +6,33 @@
     width: 100%;
     height: auto;
 }
-.footer{
-    background-color:black;
-    height: 150px;
+
     
+.row h2{
+    text-align: center;
+}
+.row p{
+    padding-right:3px;
+}
+.row h3{
+    color: blue;
+    text-align: center;
+    text-align: left;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.footer{
+    background-color: #24262b;
+}
+.footer {
+    display: flex;
+    flex-wrap: ;
+}
+.footer-col{
+    width: 25%;
+    padding: 0 15px;
 }
