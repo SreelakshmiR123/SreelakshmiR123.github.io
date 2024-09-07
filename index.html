@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    .nb1 {
+      margin-bottom: 20px;
+      display: flex;
+
+    }
+
+    .navbar-brand {
+      margin-right: 1340px;
+    }
+
+    .offcanvas offcanvas-start {
+      width: 70px;
+
+    }
+
+    .btn {
+      width: 250px;
+      height: 45px;
+    }
+
+    .btn-secondary {
+      width: 120px;
+      height: 40px;
+      margin-right: 10px;
+    }
+
+    .p1 {
+      margin-left: 4px;
+    }
+
+    .nb2 {
+      float: right;
+      position: sticky;
+    }
+
+    .m1 {
+      margin-left: 4px;
+    }
+
+    .main {
+      position: relative;
+      width: 100%;
+    }
+
+    .text-container {
+      position: absolute;
+      top: 25%;
+      left: 40px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .input-icon {
+      position: relative;
+    }
+
+    .input-icon i {
+      position: absolute;
+      left: 20px;
+      top: 20px;
+    }
+
+
+
+    .input-field {
+
+      padding: 10px;
+      text-align: start;
+      padding-left: 60px;
+
+    }
+
+    ::placeholder {
+      color: black;
+    }
+
+    .c1 {
+      padding-top: 85px;
+      justify-content: start;
+      justify-content: space-around;
+      width: 100%;
+      padding-right: 100px;
+      margin-right: 500px;
+    }
+
+
+    .card {
+      margin-right: 20px;
+      width: 100%;
+    }
+
+    .card-title {
+      font-size: 28px;
+      font-weight: 700;
+    }
+
+    .btn-link {
+      font-weight: 600;
+      line-height: 20px;
+      margin-top: 8px;
+      font-size: 16px;
+    }
+
+    .maphead {
+      text-align: start;
+      padding-left: 30px;
+      margin-bottom: 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .mapdiv {
+      margin-top: 150px;
+
+    }
+
+    .maplink {
+      float: right;
+      color: black;
+      font-size: 16px;
+      padding-right: 30px;
+
+    }
+
+    .list {
+      display: flex;
+      font-size: 16px;
+      margin-right: 50px;
+      padding-top: 50px;
+    }
+
+    .countries {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    li {
+      font-size: 18px;
+    }
+
+    .app {
+      margin-top: 250px;
+      padding-left: 170px;
+    }
+
+    .u1 {
+      padding-left: 170px;
+    }
+
+    .u3 {
+      width: 20%;
+    }
+
+    li {
+      cursor: pointer;
+    }
+
+    .footer-links li:hover {
+      text-decoration: underline;
+    }
+
+
+    .icon2 {
+      margin-left: 180px;
+
+    }
+
+    .m1 {
+      margin-right: 150px;
+      /* margin-bottom: px; */
+    }
+  </style>
+</head>
+
+<body style="overflow: scroll;">
+
+  <nav>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample"
+      aria-controls="offcanvasExample" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-label="Toggle navigation">
+      <i class="fa-solid fa-list m-3 ms-5 mt-4"></i>
+      <h5 style="float: right ; margin-top: 20px;">Uber <b>Eats</b></h5>
+    </button>
+
+    <div class="offcanvas offcanvas-start" style="width:300px ;" tabindex="-1" id="offcanvasExample"
+      aria-labelledby="offcanvasExampleLabel">
+      <div class="offcanvas-header">
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+
+      <div class="offcanvas-body">
+        <div>
+          <a class="nav-link active" aria-current="page" href="#"><button class="btn btn-dark" type="button">Sign
+              up</button></a>
+          <a class="nav-link" href="#"><button class="btn btn-light" type="button">Log in</button></a>
+          <ul type="none">
+
+            <li class="nav-item mt-3">
+              <b> Create a Business Account</b>
+            </li>
+            <li class="nav-item mt-3">
+              <b>Add your restaurant</b>
+            </li>
+            <li class="nav-item mt-3">
+              <b>Sign up to deliver</b>
+            </li>
+
+          </ul>
+          <div class="d-flex">
+            <img src="./icon.svg" alt="icon1" style="width: 56px; height: 56px;">
+            <p class="ps-3">There's more to love in <br> the app</p>
+          </div>
+          <div class="nb1">
+            <button type="button" class="btn btn-secondary"><i class="fa-brands fa-apple"></i> iphone</button>
+            <button type="button" class="btn btn-secondary"><i class="fa-brands fa-android"></i> Android</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="nb2">
+      <button type="button" class="btn btn-light rounded-pill" style="height: 45px; width: 90px;">Login</button>
+      <button type="button" class="btn btn-dark rounded-pill ms-3" style="height: 45px; width: 90px;">Signup</button>
+    </div>
+  </nav>
+  <div>
+    <div class="main">
+      <img src="./main.webp" alt="" style="height:650px ; width:100% ;">
+      <div class="text-container">
+        <h1 style="font-size: 52px; margin-bottom: 40px;"><b>Order delivery near you</b></h1>
+
+        <div class="search" style="display: flex;">
+
+          <div class="input-icon">
+            <input type="text" class="input-field" name="daddress" id="daddress"
+              placeholder="Enter your delivery address" style="height: 55px; width: 500px;border-style:none;">
+            <i class="fa-solid fa-location-dot"></i>
+          </div>
+
+          <div class="input-icon" style="margin-left: 10px;">
+            <i class="fa-solid fa-clock"></i>
+            <input list="deli" class="input-field" placeholder="Deliver now"
+              style="height: 55px; width: 220px; border-style:none ; color:black ;">
+            <datalist id="deli">
+              <option value="Delivery Now"></option>
+              <option value="Schedule for later"></option>
+            </datalist>
+          </div>
+          <button type="button" class="btn btn-dark" style="height: 55px; width:130px; margin-left: 10px;">Search
+            here</button>
+        </div>
+
+        <span style="margin-top: 24px;">Or <a href="" style="margin-top: 60px;color: #000;">Sign In</a></span>
+      </div>
+
+
+    </div>
+    <!-- ------card----- -->
+    <div class="c1 d-flex container-fluid me-5">
+      <div class="c2">
+        <div class="card" style="width: 30rem">
+          <img src="./ubercard1.webp" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Feed your employees</h5>
+
+            <a href="https://www.uber.com/in/en/business/solutions/eats/overview/" class="btn btn-link text-dark">Create a business account</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="c2">
+        <div class="card" style="width: 30rem;">
+          <img src="./ubercard2.webp" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Your restaurant,Delivered</h5>
+
+            <a href="https://merchants.ubereats.com/in/en/s/signup/" class="btn btn-link text-dark">Add your restaurant</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="c2">
+        <div class="card" style="width: 30rem;">
+          <img src="./ubercard3.webp" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Deliver with Uber Eats</h5>
+
+            <a href="https://www.uber.com/in/en/deliver/" class="btn btn-link text-dark">sign up to deliver</a>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+    <div class="mapdiv">
+      <div class="maphead">
+        <h1>Cities near me</h1>
+        <a class="maplink " href="">View all 500+ cities</a>
+      </div>
+
+
+      <img class="mappic" src="./map.jpg" alt=""
+        style="height: 350px; width: 100%; padding-left: 30px; padding-right: 30px;">
+    </div>
+  </div>
+
+  <div class="list">
+    <ul type="none">
+      <li>Akron</li><br><br>
+      <li>Albuquerque</li><br><br>
+      <li>Bridgeport</li><br><br>
+      <li>Concord</li><br><br>
+      <li>Dayton</li><br><br>
+      <li>El Paso</li><br><br>
+    </ul>
+    <ul type="none" style="margin-left: 180px;">
+      <li>Hartford</li><br><br>
+      <li>Houston</li><br><br>
+      <li>Indianapolis</li><br><br>
+      <li>McAllen</li><br><br>
+      <li>Mesa</li><br><br>
+      <li>Milwaukee</li><br><br>
+    </ul>
+    <ul type="none" style="margin-left: 180px;">
+      <li>Nashville</li><br><br>
+      <li>New Orleans</li><br><br>
+      <li>Oklahoma City</li><br><br>
+      <li>Omaha</li><br><br>
+      <li>Orlando</li><br><br>
+      <li>Palm Bay</li><br><br>
+    </ul>
+    <ul type="none" style="margin-left: 180px;">
+      <li>Providence</li><br><br>
+      <li>Queens</li><br><br>
+      <li>San Antonio</li><br><br>
+      <li>Stony Brook</li><br><br>
+      <li>Tucson</li><br><br>
+      <li>West Hollywood</li>
+    </ul>
+  </div>
+  <div class="countries">
+    <h1 style="padding-left: 30px;">Contries with Uber Eats</h1>
+
+    <a href="" style="padding-right: 50px; color:black;">View all contries</a>
+  </div>
+  <div class="list mt-5">
+
+    <ul type="none">
+      <li>Australia</li><br><br>
+      <li>Belgium</li><br><br>
+      <li>Canada</li><br><br>
+      <li>Chile</li><br><br>
+      <li>Costa Rica</li><br><br>
+      <li>Dominican Republic</li><br><br>
+      <li>Ecuador</li><br><br>
+      <li>El Salvador</li><br><br>
+    </ul>
+    <ul type="none" style="margin-left: 180px;">
+      <li>France</li><br><br>
+      <li>Germany</li><br><br>
+      <li>Guatemala</li><br><br>
+      <li>Ireland</li><br><br>
+      <li>Italy</li><br><br>
+      <li>Japan</li><br><br>
+      <li>Kenya</li><br><br>
+      <li>Luxembourg</li><br><br>
+    </ul>
+    <ul type="none" style="margin-left: 180px;">
+      <li>Mexico</li><br><br>
+      <li>Netherlands</li><br><br>
+      <li>New Zealand</li><br><br>
+      <li>Panama</li><br><br>
+      <li>Poland</li><br><br>
+      <li>Portugal</li><br><br>
+      <li>South Africa</li><br><br>
+      <li>Spain</li><br><br>
+
+    </ul>
+    <ul type="none" style="margin-left: 180px;">
+      <li>Sri Lanka</li><br><br>
+      <li>Sweden</li><br><br>
+      <li>Switzerland</li><br><br>
+      <li>Taiwan (ROC)</li><br>
+      <li>United Kingdom</li><br><br>
+      <li>United States</li><br><br>
+    </ul>
+  </div>
+  <hr style="color: #F3F3F3;">
+  <div>
+    <div class="footer-links">
+      <ul type="none" style="float: right; margin-right: 150px;padding-bottom: 10px; ">
+        <li>Restaurants near me</li><br>
+        <li>View all cities</li><br>
+        <li>View all countries</li><br>
+        <li>Pickup near me</li><br>
+        <li>About Uber Eats</li><br>
+        <li>Shop groceries</li><br>
+        <li><svg style="width: 16px;" aria-label="Select a language" role="img" focusable="false" viewBox="0 0 16 15" class="hh eh g9 hi">
+            <path
+              d="M12.267 6.667H9.733l-.933 2.2c-.467-.2-1-.534-1.533-.934.866-.866 1.6-2 2-3.266h1.4v-2h-4v-2h-2v2h-4v2h1.466c.4 1.266 1.134 2.4 1.934 3.266-1.4.934-2.734 1.467-2.734 1.467v2.133L2 11.267c.133-.067 1.867-.667 3.667-2 .8.6 1.666 1.066 2.333 1.4l-1.8 4h2.2l.867-2h3.466l.867 2h2.2zm-5.2-2a6.79 6.79 0 01-1.4 2c-.534-.6-1.067-1.267-1.4-2zm3.066 6L11 8.733l.867 1.934z">
+            </path>
+          </svg> English</li>
+      </ul>
+    </div>
+    <div class="footer-links">
+      <ul class="li1" type="none" style="float: right; margin-right: 150px; padding-bottom: 10px;">
+        <li>Get help</li><br>
+        <li>Buy gift cards</li><br>
+        <li>Add your restaurant</li><br>
+        <li>Sign up to deliver</li><br>
+        <li>Create a business account</li><br>
+        <li>promotions</li>
+      </ul>
+    </div>
+    <div class="u2">
+      <div class="u1">
+        <h3>Uber Eats</h3>
+      </div>
+      <div class="app">
+        <img src="./applestore-removebg-preview.png" alt="" style="height: 60px; width: 145;">
+        <img src="./google.png" alt="" style="height: 40px; width: 135;">
+      </div>
+    </div>
+  </div>
+  <hr>
+  <div>
+    <div class="icon2 ">
+      <i class="fa-brands fa-square-facebook me-3"></i>
+      <i class="fa-brands fa-twitter me-3"></i>
+      <i class="fa-brands fa-instagram me-3"></i>
+    </div>
+    <div class="m1">
+      <ul type="none" style="display: flex; margin-left: 770px; justify-content: space-around;">
+        <li>Privacypolicy</li>
+        <li>Terms</li>
+        <li>Pricing</li>
+        <li>Do not sell or share my personal information</li>
+      </ul>
+    </div>
+  </div>
+  <div class="last2 d-flex" style="margin-left: 500px;">
+    <p>This site is protected by reCAPTCHA and the Google Privacy Policy and Terms of Service apply.
+    </p>
+    <p style="margin-left: 25px;">© 2024 Uber Technologies Inc.</p>
+  </div>
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
